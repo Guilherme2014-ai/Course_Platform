@@ -11,7 +11,7 @@ export function LoginPage() {
     <main
       style={{
         backgroundColor: "black",
-        backgroundImage: "url(../../assets/images/blur-bg.png)",
+        backgroundImage: "url(./assets/images/blur-bg.png)",
       }}
     >
       <section>
@@ -33,7 +33,7 @@ export function LoginPage() {
         <div
           className="computerImage"
           style={{
-            backgroundImage: "url(../../assets/images/codemockup.png)",
+            backgroundImage: "url(./assets/images/codemockup.png)",
             backgroundPosition: "center",
             backgroundSize: "100%",
           }}
