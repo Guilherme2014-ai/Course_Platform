@@ -1,12 +1,12 @@
 {
   "name": "rocketseat-platform",
   "private": true,
+  "homepage": "https://Guilherme2014-ai.github.io/Course_Platform#/login",
   "version": "0.0.0",
   "scripts": {
-    "webpack:build": "webpack --config ./webpack/webpack.config.ts",
+    "build": "webpack --config ./webpack/webpack.config.ts",
     "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "deploy": "gh-pages -b gh-pages -d prod"
   },
   "dependencies": {
     "@apollo/client": "^3.6.9",
@@ -21,6 +21,7 @@
     "date-fns": "^2.28.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-react": "7.28.0",
+    "gh-pages": "^4.0.0",
     "graphql": "^16.5.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
