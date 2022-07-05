@@ -1,0 +1,32 @@
+.lessonPayload {
+    display: flex;
+
+    .lessonPayload__greenPart {
+        display: flex;
+
+        align-items: center;
+        justify-items: center;
+        text-align: center;
+
+        background-color: #015F43;
+        width: 200px;
+
+        .lessonPayload__greenPart__lessonPayload__iconContainer {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .lessonPayload__content {
+        padding: 20px;
+
+        span {
+            font-weight: 500;
+        }
+
+        p {
+            margin-top: 10px;
+            color: #C4C4CC;
+            font-weight: 100;
+        }
+    }
+}

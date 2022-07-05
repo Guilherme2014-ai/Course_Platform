@@ -1,0 +1,36 @@
+.lesson {
+    margin-bottom: 20px;
+
+    .lesson__date {
+        color: rgb(51, 51, 51);
+    }
+    .lesson__content {
+        border: solid 0.7px rgb(54, 54, 54);
+        border-radius: 5px;
+        padding: 10px;
+        margin-top: 10px;
+
+        nav {
+            div {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+
+                .lesson__content__type-class, .lesson__content__type-live {
+                    border: 1px solid #00B37E;
+                    border-radius: 3px;
+                    padding: 3px;
+
+                    font-size: 0.8rem;
+                }
+                .lesson__content__type-class {
+                    color: white;
+                }
+                .lesson__content__type-live {
+                    color: #00B37E;
+                }
+            }
+        }
+    }
+}

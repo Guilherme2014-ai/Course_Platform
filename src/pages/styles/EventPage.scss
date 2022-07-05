@@ -1,0 +1,85 @@
+.event {
+    display: flex; // Hábilita comportamentos Flex para os childs
+    min-height: 100vh; // O mínimo será a tela inteira
+    
+    font-family: 'Roboto', sans-serif;
+
+    padding-top: 57px;
+    
+    color: white;
+    background-color: #09090A;
+
+    .event__content {
+        display: flex;
+        flex: 1; // O quanto deve ocupar
+
+        .event__content-main {
+            display: flex;
+            flex: 3;// O quanto deve ocupar
+
+            .event__content__lessonMainContent {
+                display: flex;
+                flex: 1;
+                flex-direction: column;
+
+                .event__content__lessonMainContent__videoPlayerContainer {
+                    width: 100%;
+                }
+
+                .event__content__lessonMainContent__lessonInfo-atributtes {
+                    padding: 20px;
+                    
+                    .event__content__lessonMainContent__lessonInfo-atributtes__info {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        .event__content__lessonMainContent__lessonInfo-atributtes__info__title-description {
+                            width: 70%;
+                            p {
+                                color: #A8A8B3;
+                            }
+                        }
+                        .event__content__lessonMainContent__lessonInfo-atributtes__info__cummunity-chalenge {
+                            .challenge, .discordCommunity {
+                                padding: 10px;
+                                border-radius: 4px;
+                            }
+                            .discordCommunity {
+                                background-color: #00875F;
+                            }
+                            .challenge {
+                                border: 1px solid #81D8F7;
+                                color: #81D8F7;
+                            }
+                        }
+                    }
+                    .event__content__lessonMainContent__lessonInfo-atributtes__info__teacherArea, .event__content__lessonMainContent__lessonInfo-atributtes__info__teacherArea {
+                        margin-left: 8px;
+                    }
+                    .event__content__lessonMainContent__lessonInfo-atributtes__info__teacherArea {
+                        display: flex;
+                        margin-top: 25px;
+
+                        div {
+                            margin-left: 8px;
+
+                            span {
+                                font-weight: 500;
+                            }
+
+                            p {
+                                margin-top: 5px;
+                                font-size: 0.8rem;
+                                color: #A8A8B3;
+                            }
+                        }
+                    }
+                    .event__content__lessonMainContent__lessonInfo-atributtes__info__lessonPayload {
+                        display: flex;
+                    }
+                }
+            }
+        }
+    }
+}
