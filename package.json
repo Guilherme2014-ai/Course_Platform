@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --config ./webpack/webpack.config.ts",
     "dev": "vite",
-    "deploy": "gh-pages -b gh-pages -d prod"
+    "deploy": "gh-pages -b gh-pages01 -d prod"
   },
   "dependencies": {
     "@apollo/client": "^3.6.9",

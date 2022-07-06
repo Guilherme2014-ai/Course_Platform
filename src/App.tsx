@@ -1,6 +1,10 @@
 import React, { useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
+
+const enviroment = import.meta.env;
+
+console.log(enviroment);
 
 // Components
 import { EventPage } from "./pages/EventPage";

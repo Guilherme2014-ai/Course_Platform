@@ -6,12 +6,17 @@ import IgniteLabLogoComponent from "../components/logos/IgniteLabLogoComponent";
 // CSS
 import "./styles/loginPage.scss";
 
+const enviroment = import.meta.env ? import.meta.env.MODE : undefined;
+
+const imagesPath =
+  enviroment != "development" ? "./assets/images" : "../../prod/assets/images";
+
 export function LoginPage() {
   return (
     <main
       style={{
         backgroundColor: "black",
-        backgroundImage: "url(./assets/images/blur-bg.png)",
+        backgroundImage: `url(${imagesPath}/blur-bg.png)`,
       }}
     >
       <section>
@@ -33,7 +38,7 @@ export function LoginPage() {
         <div
           className="computerImage"
           style={{
-            backgroundImage: "url(./assets/images/codemockup.png)",
+            backgroundImage: `url(${imagesPath}/codemockup.png)`,
             backgroundPosition: "center",
             backgroundSize: "100%",
           }}
