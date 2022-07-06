@@ -8,7 +8,7 @@ A Little Project where the porpouse is study and use the services of GraphCMS, t
 ## Pages
 
 ### Login
-![image](https://user-images.githubusercontent.com/77082955/177573961-c7279982-b0b7-4d3a-9615-8f9cd7635241.png)
+![image](https://user-images.githubusercontent.com/77082955/177661362-db5c9c47-7e4a-4382-be6f-94ef425e292b.png)
 
 ### Event Page
 ![image](https://user-images.githubusercontent.com/77082955/177573806-b705000a-985d-4ef8-815e-5904ef8259eb.png)
