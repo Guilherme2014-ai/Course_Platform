@@ -1,7 +1,4 @@
-import { gql } from "@apollo/client";
-
-export const getAllLessonsQuery = gql`
-  query getAllLessons {
+query getAllLessons {
     lessons(orderBy: availableAt_ASC, stage: PUBLISHED) {
       id
       lessonType
@@ -9,6 +6,6 @@ export const getAllLessonsQuery = gql`
       title
       slug
       lessonType
+      description
     }
   }
-`;

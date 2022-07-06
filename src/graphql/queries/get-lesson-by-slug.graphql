@@ -1,11 +1,11 @@
-import { gql } from "@apollo/client";
-
-export const getLessonBySlugQuery = gql`
-  query getLessonBySlug($slug: String!) {
+query getLessonBySlug($slug: String!) {
     lesson(where: { slug: $slug }) {
       title
       videoId
       description
+      challenge {
+        url
+      }
       teacher {
         bio
         avatarURL
@@ -13,4 +13,3 @@ export const getLessonBySlugQuery = gql`
       }
     }
   }
-`;

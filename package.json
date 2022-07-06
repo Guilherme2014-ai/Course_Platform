@@ -6,6 +6,7 @@
   "scripts": {
     "build": "webpack --config ./webpack/webpack.config.ts",
     "dev": "vite",
+    "codegen": "graphql-codegen",
     "deploy": "gh-pages -b gh-pages01 -d prod"
   },
   "dependencies": {
@@ -36,6 +37,10 @@
     "@babel/preset-react": "^7.18.6",
     "@babel/preset-typescript": "^7.18.6",
     "@babel/register": "^7.18.6",
+    "@graphql-codegen/cli": "^2.7.0",
+    "@graphql-codegen/typescript": "^2.6.0",
+    "@graphql-codegen/typescript-operations": "^2.4.3",
+    "@graphql-codegen/typescript-react-apollo": "^3.2.17",
     "@types/date-fns": "^2.6.0",
     "@types/graphql": "^14.5.0",
     "@types/react": "^18.0.0",

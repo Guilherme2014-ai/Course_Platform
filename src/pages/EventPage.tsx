@@ -4,11 +4,8 @@ import { useParams } from "react-router";
 // Libs
 import { Youtube, DefaultUi, Player } from "@vime/react";
 
-// Services
-import { useGetLessonBySlug } from "../graphql/generated";
-
-// Interfaces
-import { ILesson } from "../interfaces/ILesson";
+// Personalized Hooks
+import { useGetLessonBySlugQuery } from "../graphql/generatedCodegen";
 
 // Components
 import { Avatar } from "@mui/material";
@@ -21,22 +18,22 @@ import "./styles/EventPage.scss";
 
 export function EventPage() {
   // Utilização de min-hight no class event
-  const { lesson_slug } = useParams();
+  const { lesson_slug } = useParams() as any as { lesson_slug: string };
 
-  const { data, loading, error } = useGetLessonBySlug({
+  const { data, loading, error } = useGetLessonBySlugQuery({
     variables: { slug: lesson_slug },
   });
 
   if (error) console.log(error);
 
-  const currentLesson: ILesson = data?.lesson;
+  const currentLesson = data?.lesson;
 
   return (
     <div className="event">
       <HeaderComponent />
       <div className="event__content">
         <main className="event__content-main">
-          {data && !loading ? (
+          {currentLesson && !loading ? (
             <div className="event__content__lessonMainContent">
               <div className="event__content__lessonMainContent__videoPlayerContainer">
                 {currentLesson.videoId && (
@@ -69,16 +66,18 @@ export function EventPage() {
                     )}
                   </div>
                 </div>
-                <div className="event__content__lessonMainContent__lessonInfo-atributtes__info__teacherArea">
-                  <Avatar
-                    alt="Teacher Picture"
-                    src={currentLesson.teacher.avatarURL}
-                  />
-                  <div>
-                    <span>{currentLesson.teacher.name}</span>
-                    <p>{currentLesson.teacher.bio.substring(0, 30)}...</p>
+                {currentLesson.teacher && (
+                  <div className="event__content__lessonMainContent__lessonInfo-atributtes__info__teacherArea">
+                    <Avatar
+                      alt="Teacher Picture"
+                      src={currentLesson.teacher.avatarURL}
+                    />
+                    <div>
+                      <span>{currentLesson.teacher.name}</span>
+                      <p>{currentLesson.teacher.bio.substring(0, 30)}...</p>
+                    </div>
                   </div>
-                </div>
+                )}
                 <br />
                 <br />
                 <br />

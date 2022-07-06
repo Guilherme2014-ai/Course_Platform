@@ -8,8 +8,13 @@ import { ILesson } from "../interfaces/ILesson";
 
 // Components
 import "./styles/LessonComponent.scss";
+import { ILessonsQuery } from "../interfaces/ILessonsQuery";
 
-export function LessonComponent({ lessonInfo }: { lessonInfo: ILesson }) {
+export function LessonComponent({
+  lessonInfo,
+}: {
+  lessonInfo: ILesson | ILessonsQuery;
+}) {
   const { lesson_slug: paramslug } = useParams();
 
   const isLessonAvailable = isPast(lessonInfo.availableAt);
@@ -53,7 +58,8 @@ export function LessonComponent({ lessonInfo }: { lessonInfo: ILesson }) {
           </nav>
           <div>
             <span>
-              <strong>{lessonInfo.title}</strong> - {lessonInfo.description}
+              <strong>{lessonInfo.title}</strong> -{" "}
+              {lessonInfo.description?.substring(0, 50)}...
             </span>
           </div>
         </div>

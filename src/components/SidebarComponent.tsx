@@ -1,10 +1,7 @@
 import React from "react";
 
-// Interfaces
-import { ILesson } from "../interfaces/ILesson";
-
-// Services
-import { useGetAllLessons } from "../graphql/generated";
+// Personalized Hook
+import { useGetAllLessonsQuery } from "../graphql/generatedCodegen";
 
 // Components
 import { LessonComponent } from "./LessonComponent";
@@ -13,10 +10,9 @@ import { LessonComponent } from "./LessonComponent";
 import "./styles/SidebarComponent.scss";
 
 export function SidebarComponent() {
-  const { loading, data, error } = useGetAllLessons();
-  const typedData = data as { lessons: ILesson[] };
+  const { loading, data, error } = useGetAllLessonsQuery();
 
-  const lessons = typedData?.lessons;
+  const lessons = data?.lessons;
 
   return (
     <aside className="sidebar">

@@ -1,14 +1,15 @@
 import React from "react";
 import { useNavigate } from "react-router";
-import { useGetAllLessons } from "../graphql/generated";
-import { ILesson } from "../interfaces/ILesson";
+
+// Personalized Hook
+import { useGetAllLessonsQuery } from "../graphql/generatedCodegen";
 
 // CSS
 import "./styles/loginFormComponent.scss";
 
 export function LoginFormComponent() {
   const navigate = useNavigate();
-  const lessons = useGetAllLessons().data as unknown as { lessons: ILesson[] };
+  const lessons = useGetAllLessonsQuery().data;
 
   function ramdomLessonRedirect(
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
