@@ -7,7 +7,7 @@
     "build": "webpack --config ./webpack/webpack.config.ts",
     "dev": "vite",
     "codegen": "graphql-codegen",
-    "deploy": "gh-pages -b gh-pages01 -d prod"
+    "deploy": "gh-pages -b gh-pages02 -d prod"
   },
   "dependencies": {
     "@apollo/client": "^3.6.9",
@@ -65,6 +65,8 @@
     "sass": "^1.53.0",
     "sass-loader": "^13.0.2",
     "ts-loader": "^9.3.1",
+    "ts-node": "^10.8.2",
+    "ts-node-dev": "^2.0.0",
     "typescript": "^4.6.3",
     "vite": "^2.9.9",
     "webpack": "^5.73.0",
